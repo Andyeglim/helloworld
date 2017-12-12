@@ -6,11 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloWorldService {
 
-    @Value("${name:Everyone}")
-    private String name;
-
-    public String getHelloMessage() {
-        return "Hello " + this.name;
+    public String getHelloMessage(final String name) {
+        return "Hello " + name;
     }
 
 }

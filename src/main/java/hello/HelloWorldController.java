@@ -16,8 +16,8 @@ public class HelloWorldController {
 
     @GetMapping("/")
     @ResponseBody
-    public String helloWorld(@RequestParam String name) {
-        return this.helloWorldService.getHelloMessage();
+    public String helloWorld(@RequestParam(value = "name", defaultValue = "World") final String name) {
+        return this.helloWorldService.getHelloMessage(name);
     }
 
 }
