@@ -11,9 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class TomcatApplication {
+public class HelloWorldApplication {
 
-    private static Log logger = LogFactory.getLog(TomcatApplication.class);
+    private static Log logger = LogFactory.getLog(HelloWorldApplication.class);
 
     @Bean
     protected ServletContextListener listener() {
@@ -33,7 +33,7 @@ public class TomcatApplication {
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(TomcatApplication.class, args);
+        SpringApplication.run(HelloWorldApplication.class, args);
     }
 
 }
